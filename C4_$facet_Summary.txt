@@ -1,0 +1,11 @@
+$bucket
+    * Must always specify at least 2 values to boundaries
+    * boundaries must all be of the same general type (Numeric, String)
+    * count is inserted by default with no output, but removed when output is specified
+
+$bucketAuto
+    * Cardinality of groupBy expression may impact even distribution and number of buckets
+    * Specifying a granularity requires the expression to groupBy to resolve to a numeric value
+
+$sortByCount
+    * Is equivalent to a group stage to count occurence, and then sorting in descending order
